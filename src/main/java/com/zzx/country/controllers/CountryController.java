@@ -1,11 +1,13 @@
 package com.zzx.country.controllers;
 
+import com.zzx.country.entites.Country;
 import com.zzx.country.repositories.CountryRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -20,4 +22,11 @@ public class CountryController {
                 countryRepositories.findAll(new PageRequest(page, 4)));
         return "index";
     }
+
+    @PostMapping("/save")
+    public String save(Country c){
+        countryRepositories.save(c);
+        return "redirect:/";
+    }
+
 }
