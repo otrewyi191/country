@@ -29,4 +29,10 @@ public class CountryController {
         return "redirect:/";
     }
 
+
+    @GetMapping("/delete")
+    public String deleteCountry(Integer id){
+        countryRepositories.delete(id);
+        return "redirect:/";
+    }
 }
