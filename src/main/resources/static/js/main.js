@@ -3,15 +3,13 @@
  */
 
 $(document).ready(function () {
-    $('.nBtn, .table .eBtn').on('click', function (event) {
 
+    $('.nBtn, .table .eBtn').on('click', function (event) {
         event.preventDefault();
         var href = $(this).attr('href');
         var text = $(this).text();
 
         if(text=="Edit"){
-
-
             $.get(href, function (country, status) {
                 $('.myForm #id').val(country.id);
                 $('.myForm #name').val(country.name);
@@ -30,14 +28,14 @@ $(document).ready(function () {
 
     });
 
+
     $('.table .delBtn').on('click', function (event) {
 
-//        event.preventDefault();
+        event.preventDefault();
+        $('#myModel').modal('show');
         var href = $(this).attr('href');
-        $('.myForm #delRef').attr('href',href);
-        $('#myModal').modal();
+        $('#myModel #delRef').attr('href',href);
 
     });
-
 
 });
