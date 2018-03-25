@@ -27,7 +27,7 @@
                         <td th:text="${country.id}"></td>
                         <td th:text="${country.name}"></td>
                         <td th:text="${country.capital}"></td>
-                        <td><a class="btn btn-primary eBtn">Edit</a></td>
+                        <td><a th:href="@{findOne/(id=${country.id})}" class="btn btn-primary eBtn">Edit</a></td>
 
 
                     </tr>
