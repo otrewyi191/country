@@ -7,6 +7,14 @@ import javax.persistence.Id;
 @Entity
 public class Country {
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue
     private Integer id;
