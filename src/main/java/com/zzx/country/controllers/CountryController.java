@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class CountryController {
@@ -34,5 +35,12 @@ public class CountryController {
     public String deleteCountry(Integer id){
         countryRepositories.delete(id);
         return "redirect:/";
+    }
+
+    @GetMapping("/findOne")
+    @ResponseBody
+    public Country findOne(Integer id){
+        Country one = countryRepositories.findOne(id);
+        return one;
     }
 }
