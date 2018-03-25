@@ -12,6 +12,11 @@ public class Country {
     private Integer id;
     private String name;
 
+    public Country(String name, String capital) {
+        this.name = name;
+        this.capital = capital;
+    }
+
     @Override
     public String toString() {
         return "Country{" +
