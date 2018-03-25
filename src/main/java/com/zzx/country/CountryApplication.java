@@ -26,19 +26,15 @@ public class CountryApplication implements CommandLineRunner{
         countryRepositories.save(new Country("Russia","Moscow"));
         countryRepositories.save(new Country("India","New Delhi"));
 
-        countryRepositories.save(new Country("Earth","World"));
-        countryRepositories.save(new Country("China","Peking"));
-        countryRepositories.save(new Country("Germany","Berlin"));
-        countryRepositories.save(new Country("USA","Washington DC"));
-        countryRepositories.save(new Country("Russia","Moscow"));
-        countryRepositories.save(new Country("India","New Delhi"));
+        countryRepositories.save(new Country("Namibia","Windhoek"));
+        countryRepositories.save(new Country("North Korea","Pyongyang"));
+        countryRepositories.save(new Country("Kenya","Nairobi"));
+        countryRepositories.save(new Country("Canada","Ottawa"));
+        countryRepositories.save(new Country("Jamaica","Kingston"));
+        countryRepositories.save(new Country("Brazil","Brazilia"));
 
-        countryRepositories.save(new Country("Earth","World"));
-        countryRepositories.save(new Country("China","Peking"));
-        countryRepositories.save(new Country("Germany","Berlin"));
-        countryRepositories.save(new Country("USA","Washington DC"));
-        countryRepositories.save(new Country("Russia","Moscow"));
-        countryRepositories.save(new Country("India","New Delhi"));
+        countryRepositories.save(new Country("Egypt","Cairo"));
+        countryRepositories.save(new Country("Nigeria","Abuja"));
 
 
     }
