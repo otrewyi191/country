@@ -17,6 +17,9 @@ public class Country {
         this.capital = capital;
     }
 
+    public Country() {
+    }
+
     @Override
     public String toString() {
         return "Country{" +
